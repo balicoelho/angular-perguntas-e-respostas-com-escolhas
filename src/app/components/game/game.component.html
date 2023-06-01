@@ -1,0 +1,127 @@
+<div class="container">
+  <div class="question1 questions" *ngIf="questionFirst">
+    <p>Olá, vamos entender as suas preferencias?</p>
+    <br />
+    <p>Você quer seguir para área de Front-End ou para a área de Back-End?</p>
+    <div>
+      <input
+        type="radio"
+        id="front-End"
+        name="question1"
+        value="Front-End"
+        [(ngModel)]="question1"
+      />
+      <label for="front-End">Front-End</label>
+      <input
+        type="radio"
+        id="back-End"
+        name="question1"
+        value="Back-End"
+        [(ngModel)]="question1"
+      />
+      <label for="back-End">Back-End</label>
+      <button (click)="btnQuestion1()">OK</button>
+    </div>
+  </div>
+  <div class="question2 questions" *ngIf="question2">
+    <p>Legal! Como {{ linguagem }}, o que você deseja aprender?</p>
+    <div class="answer2">
+      <input
+        type="radio"
+        id="{{ ling1 }}"
+        name="question2"
+        value="{{ ling1 }}"
+        [(ngModel)]="question2answer"
+      />
+      <label for="{{ ling1 }}">{{ ling1 }}</label>
+      <input
+        type="radio"
+        id="{{ ling2 }}"
+        name="question2"
+        value="{{ ling2 }}"
+        [(ngModel)]="question2answer"
+      />
+      <label for="{{ ling2 }}">{{ ling2 }}</label>
+      <button (click)="btnQuestion2()">OK</button>
+    </div>
+  </div>
+  <div class="question3 questions" *ngIf="question3">
+    <p>
+      Você deseja seguir se especializando na área escolhida ou seguir se
+      desenvolvendo para se tornar Fullstack?
+    </p>
+    <div>
+      <input
+        type="radio"
+        id="especializacao"
+        name="question3"
+        value="especializacao"
+        [(ngModel)]="answer3"
+      />
+      <label for="especializacao">Especializando na área</label>
+      <input
+        type="radio"
+        id="fullstack"
+        name="question3"
+        value="fullstack"
+        [(ngModel)]="answer3"
+      />
+      <label for="fullstack">Fullstack</label>
+      <button (click)="btnQuestion3()">OK</button>
+    </div>
+    <div class="show-answer3" *ngIf="answer4">
+      <p>Legal que você deseja {{ text3 }}.</p>
+    </div>
+  </div>
+  <div class="question4 questions" *ngIf="question4">
+    <label for="answer"
+      >Quais são as tecnologias que você gostaria de se especializar ou de
+      conhecer?</label
+    >
+    <div class="answer">
+      <input
+        type="text"
+        id="answer"
+        name="question4"
+        value=""
+        [(ngModel)]="newAnswer"
+      />
+      <button (click)="btnQuestion4(newAnswer)">OK</button>
+    </div>
+  </div>
+  <div class="question5 questions" *ngIf="question5">
+    <p>Tecnologias que gostaria de aprender:</p>
+    <ul>
+      <li *ngFor="let answer of answers">{{ answer }}</li>
+    </ul>
+    <div class="question6 questions" *ngIf="question6">
+      <p>Tem mais alguma tecnologia que você gostaria de aprender?</p>
+      <div>
+        <input
+          type="radio"
+          id="sim"
+          name="question2"
+          value="sim"
+          [(ngModel)]="answer6"
+        />
+        <label for="sim">Sim</label>
+        <input
+          type="radio"
+          id="nao"
+          name="question2"
+          value="nao"
+          [(ngModel)]="answer6"
+        />
+        <label for="nao">Não</label>
+        <button (click)="btnQuestion5()">OK</button>
+      </div>
+    </div>
+  </div>
+  <div class="final" *ngIf="final">
+    <p>
+      Muito bem! Sucesso nos estudos para se tornar um
+      {{ question1 }} developer, se especializando em {{ question2answer }} para
+      {{ text3 }}
+    </p>
+  </div>
+</div>

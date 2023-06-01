@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  justify-content: center;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: aquamarine;
+  border-radius: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+label {
+  margin-right: 1rem;
+  margin-left: 0.5rem;
+  font-size: 17px;
+}
+
+button {
+  margin-left: 1rem;
+  padding: 0.2rem 0.4rem;
+  background-color: darkcyan;
+  color: azure;
+  border: none;
+  cursor: pointer;
+}
+input {
+  border: none;
+}
+
+.answer {
+  margin-top: 1rem;
+}
+
+.answer > input {
+  border-radius: 1rem;
+  padding: 0.4rem;
+}
+
+.answer > input:focus {
+  border: none;
+  outline: none;
+}
+
+.answer2 {
+  text-transform: capitalize;
+}
+
+.final > p {
+  text-align: center;
+}
